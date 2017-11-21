@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.buildmeme.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.example.user.buildmeme.myBottom_sectionFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            tools:layout="@layout/mybottom_sectionfragment" />
+
+        <fragment
+            android:id="@+id/fragment2"
+            android:name="com.example.user.buildmeme.myTop_pictureFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_above="@+id/fragment"
+            android:layout_alignParentStart="true"
+            tools:layout="@layout/mytop_picturefragment" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

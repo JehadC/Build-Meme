@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/topEdit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="@string/topText"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/bottomEdit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/topEdit_text"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="@string/bottomText"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/createMeme_button"
+                android:onClick="createMeme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/bottomEdit_text"
+                android:text="@string/createMeme_button" />
+
+            <Button
+                android:id="@+id/uploadButton"
+                android:onClick="uploadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/createMeme_button"
+                android:layout_toEndOf="@+id/createMeme_button"
+                android:text="@string/uploadButton" />
+
+            <Button
+                android:id="@+id/downloadButton"
+                android:onClick="downloadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/uploadButton"
+                android:layout_alignBottom="@+id/uploadButton"
+                android:layout_toEndOf="@+id/uploadButton"
+                android:text="@string/downloadButton" />
+        </RelativeLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

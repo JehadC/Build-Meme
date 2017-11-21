@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Build Meme</string>
+    <string name="topText">Top Text</string>
+    <string name="bottomText">Bottom Text</string>
+    <string name="createMeme_button">Create Meme</string>
+    <string name="uploadButton">Upload</string>
+    <string name="downloadButton">Download</string>
+</resources>
